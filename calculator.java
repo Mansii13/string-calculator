@@ -15,7 +15,7 @@ class StringCalculator{
     protected static int method_invoke = 0;
     int sum;
 
-    public String Add(String numbers){
+    public int Add(String numbers){
         
         try {
 
@@ -33,8 +33,7 @@ class StringCalculator{
             } 
 
             if(numbers.contains("\n,") || numbers.contains(",\n")){
-                //System.out.println("String Not Accepted");
-                return "String Not Accepted";
+                return 0;
             }
             
             if(numbers.contains("\n")){
@@ -62,7 +61,7 @@ class StringCalculator{
 
         } catch (Exception e) { }
 
-        return String.valueOf(sum);
+        return sum;
     }
 
     public int GetCalledCount(){
